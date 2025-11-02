@@ -3,6 +3,7 @@ package com.computers.appolo.config;
 
 import com.computers.appolo.component.JwtAuthenticationFilter;
 import com.computers.appolo.repository.UserRepository;
+import com.computers.appolo.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +31,7 @@ import java.util.ArrayList;
 public class SecurityConfig {
 
     @Autowired
-    private  UserDetailsService userDetailsService;
+    private CustomUserDetailsService userDetailsService;
     @Autowired
     private JwtAuthenticationFilter jwtFilter;
 

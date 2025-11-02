@@ -18,7 +18,6 @@ public class JwtTokenProvider {
     @Value("${app.jwtExpirationMs}")
     private long jwtExpirationMs;
 
-    // ✅ Use same key for signing and validation
     private Key getSigningKey() {
         return Keys.hmacShaKeyFor(jwtSecret.getBytes());
         // If using Base64-encoded secret, use this instead:
